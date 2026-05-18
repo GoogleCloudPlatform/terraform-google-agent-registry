@@ -54,3 +54,9 @@ resource "google_agent_registry_service" "this" {
     }
   }
 }
+
+# time change is done in order to remove the flacky ness in resouce not found in case of immediate registration
+resource "time_sleep" "wait_after_registration" {
+  depends_on      = [google_agent_registry_service.this]
+  create_duration = "5s"
+}

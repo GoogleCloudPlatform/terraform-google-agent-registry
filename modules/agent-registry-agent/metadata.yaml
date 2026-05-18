@@ -95,6 +95,21 @@ spec:
               version: ">= 5.1.0"
             spec:
               outputExpr: "[reasoning_engine_id]"
+      - name: wait_time
+        description: A dynamic wait time to delay agent data fetching, specified as a string (e.g., '10s'). Defaults to '0s'.
+        varType: string
+        defaultValue: 0s
+        connections:
+          - source:
+              source: github.com/GoogleCloudPlatform/terraform-google-vertex-ai//modules/agent-engine-nightly
+              version: ">= 0.6.1"
+            spec:
+              outputExpr: "\"20s\""
+          - source:
+              source: github.com/GoogleCloudPlatform/terraform-google-vertex-ai//modules/agent-engine
+              version: ">= 0.6.1"
+            spec:
+              outputExpr: "\"20s\""
     outputs:
       - name: agent_display_name
         description: The display name of the Agent.

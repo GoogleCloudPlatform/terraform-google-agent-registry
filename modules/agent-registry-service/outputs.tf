@@ -65,6 +65,7 @@ output "discovery_filter" {
   )
 
   depends_on = [
-    google_agent_registry_service.this
+    google_agent_registry_service.this,
+    time_sleep.wait_after_registration
   ]
 }

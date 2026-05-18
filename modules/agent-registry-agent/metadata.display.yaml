@@ -40,6 +40,9 @@ spec:
         module_depends_on:
           name: module_depends_on
           title: Module Depends On
+        wait_time:
+          name: wait_time
+          title: Wait Time
         project_id:
           name: project_id
           title: Project Id

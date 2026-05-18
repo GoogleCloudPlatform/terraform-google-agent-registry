@@ -41,3 +41,9 @@ variable "module_depends_on" {
   type        = list(string)
   default     = []
 }
+
+variable "wait_time" {
+  description = "A dynamic wait time to delay agent data fetching, specified as a string (e.g., '10s'). Defaults to '0s'."
+  type        = string
+  default     = "0s"
+}

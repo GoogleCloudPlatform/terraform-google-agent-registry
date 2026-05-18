@@ -16,6 +16,7 @@ Use this module to resolve the SPIFFE ID and endpoint details for Agent-to-Agent
 | location | The location of the Agent Registry resource (e.g., us-central1). | `string` | n/a | yes |
 | module\_depends\_on | A list of external resources or modules that this module should depend on. | `list(string)` | `[]` | no |
 | project\_id | The ID of the project in which the resource belongs. | `string` | n/a | yes |
+| wait\_time | A dynamic wait time to delay agent data fetching, specified as a string (e.g., '10s'). Defaults to '0s'. | `string` | `"0s"` | no |
 
 ## Outputs
 

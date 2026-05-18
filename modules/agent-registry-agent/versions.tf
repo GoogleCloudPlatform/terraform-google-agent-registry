@@ -31,6 +31,10 @@ terraform {
       source  = "hashicorp/google-nightly"
       version = "2026.4.2-7.26.0"
     }
+    time = {
+      source  = "hashicorp/time"
+      version = ">=0.13.1"
+    }
   }
 
   provider_meta "google" {
