@@ -8,6 +8,13 @@ and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 This changelog is generated automatically based on [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
+## [0.3.4](https://github.com/GoogleCloudPlatform/terraform-google-agent-registry/compare/v0.3.3...v0.3.4) (2026-05-18)
+
+
+### Bug Fixes
+
+* added 5 sec delay in agent registry service ([9ff8b4f](https://github.com/GoogleCloudPlatform/terraform-google-agent-registry/commit/9ff8b4fbe670a02e64da87ec53230116891ea0b9))
+
 ## [0.3.3](https://github.com/GoogleCloudPlatform/terraform-google-agent-registry/compare/v0.3.2...v0.3.3) (2026-04-30)
 
 

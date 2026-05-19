@@ -24,7 +24,7 @@ spec:
     source:
       repo: https://github.com/GoogleCloudPlatform/terraform-google-agent-registry.git
       sourceType: git
-    version: 0.3.3
+    version: 0.3.4
     actuationTool:
       flavor: Terraform
       version: ">= 1.3"
@@ -88,4 +88,4 @@ spec:
       - source: hashicorp/google-beta
         version: ">= 6.6.0, < 8"
       - source: hashicorp/google-nightly
-        version: 0.3.3.25.0
+        version: 0.3.4.25.0
