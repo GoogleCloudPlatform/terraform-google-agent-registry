@@ -20,11 +20,11 @@ terraform {
   required_providers {
     google = {
       source  = "hashicorp/google"
-      version = ">= 6.6.0, < 8"
+      version = ">= 6.6.0, < 9"
     }
     google-beta = {
       source  = "hashicorp/google-beta"
-      version = ">= 6.6.0, < 8"
+      version = ">= 6.6.0, < 9"
     }
     # Match the google-nightly version used in the root versions.tf
     google-nightly = {
