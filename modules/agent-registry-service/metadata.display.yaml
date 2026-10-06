@@ -57,9 +57,9 @@ spec:
           title: Service Id
     runtime:
       outputs:
-        id:
+        discovery_filter:
           visibility: VISIBILITY_ROOT
         display_name:
           visibility: VISIBILITY_ROOT
-        discovery_filter:
+        id:
           visibility: VISIBILITY_ROOT

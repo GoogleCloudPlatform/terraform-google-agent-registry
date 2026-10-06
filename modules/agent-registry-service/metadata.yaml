@@ -62,6 +62,7 @@ spec:
       - name: description
         description: The description of the service.
         varType: string
+        defaultValue: null
       - name: interfaces
         description: The connection details for the Service.
         varType: |-
@@ -93,6 +94,7 @@ spec:
               type    = string # NO_SPEC or A2A_AGENT_CARD
               content = string # JSON format content
             })
+        defaultValue: null
       - name: mcp_server_spec
         description: The spec of the MCP Server. Mutually exclusive with agent_spec and endpoint_spec.
         varType: |-
@@ -100,17 +102,25 @@ spec:
               type    = string # NO_SPEC or TOOL_SPEC
               content = string # JSON format content
             })
+        defaultValue: null
       - name: endpoint_spec
         description: The spec of the Endpoint. Mutually exclusive with agent_spec and mcp_server_spec.
         varType: |-
           object({
               type = string # NO_SPEC
             })
+        defaultValue: null
     outputs:
       - name: agent
         description: Details of the Agent configuration.
       - name: create_time
         description: The timestamp when the resource was created.
+      - name: discovery_filter
+        description: A pre-formatted filter string for discovery modules.
+        type: string
+      - name: display_name
+        description: The user-defined display name of the service.
+        type: string
       - name: endpoint
         description: Details of the Endpoint configuration.
       - name: id
@@ -119,12 +129,6 @@ spec:
         description: Details of the MCP Server configuration.
       - name: update_time
         description: The timestamp when the resource was updated.
-      - name: display_name
-        description: The user-defined display name.
-        type: string
-      - name: discovery_filter
-        description: The filter string for finding this service.
-        type: string
   requirements:
     roles:
       - level: Project
