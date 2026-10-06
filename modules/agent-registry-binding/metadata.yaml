@@ -58,9 +58,11 @@ spec:
       - name: display_name
         description: User-defined display name for the Binding.
         varType: string
+        defaultValue: null
       - name: description
         description: The description of the Binding.
         varType: string
+        defaultValue: null
       - name: source_identifier
         description: "The identifier of the source Agent. Format: urn:agent:{publisher}:{namespace}:{name}"
         varType: string
@@ -102,12 +104,16 @@ spec:
             spec:
               outputExpr: connector_self_link
     outputs:
-      - name: id
-        description: An identifier for the resource with format projects/{{project}}/locations/{{location}}/bindings/{{binding_id}}
-        type: string
       - name: binding_id
         description: The binding id.
         type: string
+      - name: create_time
+        description: The timestamp marking the initial creation of the Binding resource.
+      - name: id
+        description: An identifier for the resource with format projects/{{project}}/locations/{{location}}/bindings/{{binding_id}}
+        type: string
+      - name: update_time
+        description: The timestamp of the last update to the Binding resource.
   requirements:
     roles:
       - level: Project
