@@ -54,6 +54,7 @@ spec:
       - name: filter
         description: A filter string to find the Agent (e.g., 'display_name="my-agent"').
         varType: string
+        defaultValue: null
         connections:
           - source:
               source: github.com/GoogleCloudPlatform/terraform-google-agent-registry//modules/agent-registry-service
@@ -75,6 +76,7 @@ spec:
       - name: agent_id
         description: The system-generated ID for a registered agent.
         varType: string
+        defaultValue: null
       - name: module_depends_on
         description: A list of external resources or modules that this module should depend on.
         varType: list(string)
@@ -121,13 +123,13 @@ spec:
         description: The connection details and interfaces for the Agent.
       - name: agent_skills
         description: The list of skills and capabilities defined for the Agent.
+      - name: agent_urn
+        description: The globally unique URN for the agent.
+        type: string
       - name: agent_version
         description: The version of the Agent.
       - name: last_updated
         description: The last time the agent metadata was updated.
-      - name: agent_urn
-        description: The logical URN of the agent.
-        type: string
   requirements:
     roles:
       - level: Project
