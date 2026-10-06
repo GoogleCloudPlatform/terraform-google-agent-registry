@@ -54,6 +54,7 @@ spec:
       - name: filter
         description: "A filter string to find the Mcp server "
         varType: string
+        defaultValue: null
         connections:
           - source:
               source: github.com/GoogleCloudPlatform/terraform-google-agent-registry//modules/agent-registry-service
@@ -63,6 +64,7 @@ spec:
       - name: mcp_server_id
         description: The system-generated ID for an MCP server (e.g., agentregistry-0000...).
         varType: string
+        defaultValue: null
       - name: module_depends_on
         description: A list of external resources or modules that this module should depend on.
         varType: list(string)
@@ -87,7 +89,7 @@ spec:
       - name: mcp_server_tools
         description: The list of tools available with the MCP Server, including their names, descriptions, and annotations.
       - name: mcp_server_urn
-        description: The logical URN of the MCP server.
+        description: The globally unique URN for the MCP server.
         type: string
   requirements:
     roles:
